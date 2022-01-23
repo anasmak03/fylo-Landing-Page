@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #181F2A;
+    font-family: 'Luxurious Roman', cursive;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu{
+    display: flex;
+   
+}
+
+.nav-item{
+    margin: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-link{
+    padding: 0.1rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+.logo{
+    margin: 20px;
+}
+
+.logo img{
+    width: 50%;
+}
+
+.nav-link:hover{
+    border-bottom: 1px solid white;
+}
+
+.hamburger{
+    display: flex;
+    position: absolute;
+    right: 5px;
+    top: 25px;
+    width: 30px;
+    height: 21px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
+}
+
+.bar{
+    width: 100%;
+    height: 1.2px;
+    border-radius: 8px;
+    background-color: white;
+    
+}
+
+
+@media screen and (max-width:501px){
+    .hamburger{
+        display: flex;
+    }
+    .nav-menu{
+        display: none;
+        width: 100%;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(47deg);
+        transition: all 1s ease-in;
+        
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-47deg);
+        transition: all 1s ease-in;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .nav-menu{
+        flex-direction: column;
+        width: 50%;
+    }
+    .nav-item{
+        text-align: center;
+        margin: 15px;
+    }
+    .nav-link{
+        padding: .5rem 1rem;
+    }
+    .nav-menu.active{
+        display: flex;
+    }
+
+    .logo img{
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 30px;
+    }
+}
+
+
+#sec1 .box{
+    text-align: center;
+    color: white;
+}
+
+.box img{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+    width: 40%;
+}
+
+.box h1{
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.box p{
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.box button{
+    padding: 18px 55px;
+    background-color: rgba(65, 105, 225, 0.815);
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.box button:hover{
+    background-color: rgba(65, 105, 225, 0.418);
+    transition: all 0.5s ease-in;
+}
+
+@media screen and (max-width:700px){
+    .box img{
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 40px;
+    }
+    .box {text-align: center;}
+}
